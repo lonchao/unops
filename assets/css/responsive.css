@@ -1536,6 +1536,8 @@
       display: none; }
       #header .language_links_mobile li.current {
         display: block; }
+        #header .language_links_mobile li.current a {
+          background: url(../imgs/responsive/arrow_tablet_language.png) right 6px top 9px no-repeat #b4b7b9; }
       #header .language_links_mobile li a {
         border-radius: 3px;
         background: #B4B7B9;
@@ -1544,6 +1546,7 @@
         color: #FFFFFF;
         line-height: 17px;
         padding: 4px 8px;
+        padding-right: 22px;
         display: block;
         text-align: center; }
   #header .right {

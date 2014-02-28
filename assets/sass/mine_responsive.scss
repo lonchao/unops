@@ -1032,12 +1032,17 @@
         li{
           display: block;
           margin-bottom: 5px;
+          
         }
       }
       li{
         display: none;
         &.current{
           display: block;
+          a{
+            background: url(../imgs/responsive/arrow_tablet_language.png) right 6px top 9px no-repeat #B4B7B9;
+            
+          }
         }
 
         a{
@@ -1048,6 +1053,7 @@
           color: #FFFFFF;
           line-height: 17px;
           padding: 4px 8px;
+          padding-right: 22px;
           display: block;
           text-align: center;
 

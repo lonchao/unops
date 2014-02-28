@@ -167,7 +167,7 @@ $(function() {
 
   //language_links_mobile
   var $ul = $("#header").find(".language_links");
-  $("#header").find(".wrapper:eq(0)").prepend($ul.clone().removeClass('language_links').addClass('language_links_mobile').remove('.separator').prepend('<li class="current"><a href="#">Language</a></li>'));
+  $("#header").find(".wrapper:eq(0)").prepend($ul.clone().removeClass('language_links').addClass('language_links_mobile').remove('.separator'));
   if ($('.language_links_mobile').length>0) {
     $('.language_links_mobile .current').click(function (){
       $(this).parent().toggleClass('opened');
