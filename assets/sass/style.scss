@@ -445,9 +445,16 @@ cite{
     width: 124px;
     height: 122px;
     background: url(../imgs/joinusbtn.png) center center no-repeat;
+    z-index: 10001;
+    &.fixed{
+     position: fixed;
+     
+     top: 259px;
+     
+    }
     &.close{
       background: url(../imgs/joinuns_close.png) center center no-repeat;
-      right: -186px;
+      right: -156px;
       left: auto;
       z-index: 10001;
     }

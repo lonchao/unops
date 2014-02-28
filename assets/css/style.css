@@ -345,10 +345,14 @@ cite {
     left: -166px;
     width: 124px;
     height: 122px;
-    background: url(../imgs/joinusbtn.png) center center no-repeat; }
+    background: url(../imgs/joinusbtn.png) center center no-repeat;
+    z-index: 10001; }
+    #header .joinus.fixed {
+      position: fixed;
+      top: 259px; }
     #header .joinus.close {
       background: url(../imgs/joinuns_close.png) center center no-repeat;
-      right: -186px;
+      right: -156px;
       left: auto;
       z-index: 10001; }
   #header .logo {

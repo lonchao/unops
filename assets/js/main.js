@@ -150,19 +150,19 @@ $(function() {
 
       });
 
+});
+addBack('second');
+addBack('third');
+$('.responsive_menu .levels').find('.back').click(function(e){
+  e.preventDefault();
+  if($(window).width()<768 && !andandomenu){
+    andandomenu=true;
+    $('.responsive_menu .levels').animate({left:'+='+$(window).width()+'px'},'fast',function(){
+      andandomenu=false;
     });
-    addBack('second');
-    addBack('third');
-    $('.responsive_menu .levels').find('.back').click(function(e){
-      e.preventDefault();
-      if($(window).width()<768 && !andandomenu){
-        andandomenu=true;
-        $('.responsive_menu .levels').animate({left:'+='+$(window).width()+'px'},'fast',function(){
-          andandomenu=false;
-        });
-      }
-    })
   }
+})
+}
   //END Menu REsponsive
 
   //language_links_mobile
@@ -177,6 +177,7 @@ $(function() {
 
 
   resize();
+  scroller();
 });
 
 function ready_joiuns () {
@@ -244,6 +245,7 @@ function joinusPage(){
           $('.joinus_page').remove();
         });
         $('.joinus').removeClass('close');
+        scroller();
         $('.joinus').fadeIn(function () {
           fazendoJoin = false;
         });
@@ -257,6 +259,7 @@ function joinusPage(){
 
           $('.joinus').addClass('close');
           ready_joiuns();
+          scroller();
           $('.joinus').fadeIn(function () {
             fazendoJoin = false;
           });
@@ -270,6 +273,9 @@ function joinusPage(){
 $(window).resize(function(){
   resize();  
 })
+$(window).scroll(function (oEvent) {
+  scroller();
+});
 
 function resize(){
   // console.log($(window).width());
@@ -341,20 +347,58 @@ function resize(){
   //gallery
   if($(window).width()<960){
     if ($('.link_to_gallery').length>0) {
-       $('.link_to_gallery').attr('width','708');
-        $('.link_to_gallery').attr('height','532');
-       if($(window).width()<768){
-        $('.link_to_gallery').attr('width','284');
-        $('.link_to_gallery').attr('height','190');
-       }
-    }
-  }else{
-    if ($('.link_to_gallery').length>0) {
-       $('.link_to_gallery').attr('width','796');
-        $('.link_to_gallery').attr('height','532');
+     $('.link_to_gallery').attr('width','708');
+     $('.link_to_gallery').attr('height','532');
+     if($(window).width()<768){
+      $('.link_to_gallery').attr('width','284');
+      $('.link_to_gallery').attr('height','190');
     }
   }
+}else{
+  if ($('.link_to_gallery').length>0) {
+   $('.link_to_gallery').attr('width','796');
+   $('.link_to_gallery').attr('height','532');
+ }
 }
+}
+
+function scroller(){
+    // alert('adsasd');
+    if ($(window).scrollTop() > 320) {
+        // alert('adsasd');
+        if($('.joinus').length > 0){
+          $('.joinus').addClass('fixed');
+          if($('.joinus').hasClass('close')){
+            var right = $('.featured .wrapper').position().left +$('.featured .wrapper').width()+32;          
+            //$('.joinus').css('left',left+'px');
+            console.log(right);
+            $('.joinus').css('left','auto');
+            $('.joinus').css('left',right+'px');
+          }else{
+            var left = $('.featured .wrapper').position().left - 166;          
+            $('.joinus').css('left',left+'px');
+            
+          }
+        }
+        
+      }else{
+        if($('.joinus').length > 0){
+          if($('.joinus').hasClass('close')){
+            var right = $('.featured .wrapper').position().left - 166;          
+            
+            $('.joinus').removeClass('fixed');
+          $('.joinus').css('left','auto');
+          }else{
+
+          $('.joinus').removeClass('fixed');
+          $('.joinus').css('left','-166px');
+          }
+        }                
+
+      }
+
+    }
+
 
 
 
