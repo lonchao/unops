@@ -87,33 +87,6 @@ $(function() {
   if ($('#project').length >0) {
     $( ".four_columns .column:nth-child(3)" ).addClass('last');
   }
-  if ($('.cases').length >0) {
-    $( ".cases .item:nth-child(3n)" ).addClass('last');
-
-
-    $('.loadmore').click(function(e){
-      e.preventDefault();
-      var $this = $(this);
-
-      $this.hide();
-      $('#dvLoad').show();
-
-      var divisor = $('.cases');
-      // carrega o conteudo
-      var content = $('<div class="new_content"></div>');
-      var newContent = $('.new_content').html();
-      content.load('procurament_more.html', {}, function()
-      {
-        // oculta o loader e slideDown as noticias carregadas
-        $('#dvLoad').hide();
-        $('.new_content').slideDown();
-      });
-      // coloca o conteudo no DOM
-      divisor.append(content);
-
-      $this.show();
-    });
-  }
 
   var andandomenu=false;
 
