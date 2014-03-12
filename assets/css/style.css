@@ -870,13 +870,13 @@ cite {
           float: none;
           position: relative;
           display: block;
-          margin-left: 158px; }
+          margin-left: 158px;
+          font-style: italic;
+          font-size: 14px;
+          color: #666666;
+          line-height: 26px;
+          letter-spacing: 0.5px; }
           .phrase .right p {
-            font-style: italic;
-            font-size: 14px;
-            color: #666666;
-            line-height: 26px;
-            letter-spacing: 0.5px;
             margin: 0; }
     .services_columns .column.become {
       margin-left: 2.5%;
