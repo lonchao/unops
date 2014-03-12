@@ -843,20 +843,20 @@ cite {
         color: #666666;
         line-height: 24px;
         letter-spacing: 0.5px; }
-      .services_columns .column.partners .phrase {
+      .phrase {
         border-radius: 3px;
         background: #FAFBFC;
         border: 1px solid #CED4D9;
         padding: 21px; }
-        .services_columns .column.partners .phrase .left {
+        .phrase .left {
           width: 128px;
           float: left;
           position: relative;
           display: block; }
-          .services_columns .column.partners .phrase .left img {
+          .phrase .left img {
             margin-bottom: 10px;
             width: 128px; }
-          .services_columns .column.partners .phrase .left label {
+          .phrase .left label {
             font-weight: 400;
             font-size: 16px;
             color: #666666;
@@ -864,14 +864,14 @@ cite {
             margin: 10px 0;
             display: block;
             position: relative; }
-          .services_columns .column.partners .phrase .left .btn {
+          .phrase .left .btn {
             display: block; }
-        .services_columns .column.partners .phrase .right {
+        .phrase .right {
           float: none;
           position: relative;
           display: block;
           margin-left: 158px; }
-          .services_columns .column.partners .phrase .right p {
+          .phrase .right p {
             font-style: italic;
             font-size: 14px;
             color: #666666;
