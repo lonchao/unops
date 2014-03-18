@@ -293,19 +293,23 @@ cite {
       letter-spacing: 0.5px;
       text-transform: uppercase;
       text-decoration: none !important; }
-      .share li a.facebook {
-        background: url(../imgs/share_facebook.png) left center no-repeat;
+      .share li a.st_facebook_custom {
+        background: url('../imgs/share_facebook.png') left center no-repeat;
         padding-left: 15px; }
-      .share li a.twitter {
-        background: url(../imgs/share_twitter.png) left center no-repeat;
+      .share li a.st_linkedin_custom {
+        background: url('../imgs/share_linkedin.png') left center no-repeat;
+        padding-left: 23px; 
+		    color: #0085AF; }
+	    .share li a.st_twitter_custom {
+        background: url('../imgs/share_twitter.png') left center no-repeat;
         padding-left: 23px;
         color: #00AAED; }
       .share li a.print {
-        background: url(../imgs/share_print.png) left center no-repeat;
+        background: url('../imgs/share_print.png') left center no-repeat;
         padding-left: 20px;
         color: #888888; }
-      .share li a.more {
-        background: url(../imgs/share_more.png) left center no-repeat;
+      .share li a.st_sharethis_custom {
+        background: url('../imgs/share_more.png') left center no-repeat;
         padding-left: 19px;
         color: #5AA624; }
 
