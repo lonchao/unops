@@ -1180,7 +1180,7 @@ cite {
       -ms-transform: translate3d(0px, 20px, 0px);
       -o-transform: translate3d(0px, 20px, 0px);
       transform: translate3d(0px, 20px, 0px); }
-    .blocks .block:hover.half a {
+    .blocks .block:hover.half > a {
       -webkit-transform: translate3d(0px, -75px, 0px);
       -moz-transform: translate3d(0px, -75px, 0px);
       -ms-transform: translate3d(0px, -75px, 0px);
@@ -1189,9 +1189,9 @@ cite {
       -webkit-transform: scale(0.5, 0.5);
       transform: scale(0.5, 0.5);
       opacity: 0.2; }
-    .blocks .block:hover.newsletter:hover a, .blocks .block:hover.video:hover a, .blocks .block:hover.mission:hover a, .blocks .block:hover.projects:hover a, .blocks .block:hover.where_work:hover a {
+    .blocks .block:hover.newsletter:hover a, .blocks .block:hover.video:hover a, .blocks .block:hover.mission:hover a, .blocks .block:hover.projects:hover a {
       opacity: 1; }
-    .blocks .block:hover.newsletter a, .blocks .block:hover.video a, .blocks .block:hover.mission a, .blocks .block:hover.projects a, .blocks .block:hover.where_work a {
+    .blocks .block:hover.newsletter > a, .blocks .block:hover.video > a, .blocks .block:hover.mission > a, .blocks .block:hover.projects > a {
       -webkit-transform: none;
       -moz-transform: none;
       -ms-transform: none;
@@ -1314,11 +1314,20 @@ cite {
         overflow: hidden; }
     .blocks .block.where_work {
       height: 240px;
-      background: url(../imgs/icon_planet.png) no-repeat #695ba2;
-      background-position: center 58px;
+      background-color: #695BA2;
       position: relative; }
+      .blocks .block.where_work > a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../imgs/icon_planet.png) center 58px no-repeat;
+        text-indent: -1000px;
+        overflow: hidden; }
       .blocks .block.where_work .btn {
-        color: #C3B8EF; }
+        color: #C3B8EF;
+        z-index: 9;
+        display: block; }
     .blocks .block.twitter_timeline {
       background-color: #EEF1F4; }
       .blocks .block.twitter_timeline .twitter-timeline {
