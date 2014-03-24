@@ -1481,7 +1481,7 @@
     width: 100% !important;
     margin: 10px 0 30px !important; }
 
-  .share {
+.share {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -1492,27 +1492,28 @@
     .share.simple {
       top: 0; }
     .share li {
-      width: 24.7%;
+      width: 35px;
       margin: 0;
       display: inline-block;
-      padding-top: 20px; }
+      padding-top: 7px; }
       .share li.separator {
         width: 1px !important; }
       .share li:first-child {
         margin-left: 0; }
+	  .share li:nth-child(8), .share li:nth-child(10) {
+	    padding-top: 14px;
+		width: 40px;
+	  }
       .share li a {
         font-size: 9px;
         font-weight: 600;
-        padding: 17px 0 0 !important;
         background-position: center top !important; }
-        .share li a.facebook {
-          background: url("../imgs/share_facebook_mobile.png") no-repeat; }
-        .share li a.twitter {
-          background: url("../imgs/share_twitter_mobile.png") no-repeat; }
         .share li a.print {
-          background: url("../imgs/share_print_mobile.png") no-repeat; }
-        .share li a.more {
-          background: url("../imgs/share_more_mobile.png") no-repeat; }
+          padding: 17px 0 0 !important;
+ 	    }
+        .share li a.st_sharethis_custom {
+          padding: 17px 0 0 !important;
+		}
 
   #header .logo a {
     top: 22px;
