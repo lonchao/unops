@@ -267,8 +267,8 @@ cite {
     opacity: .8;
     list-style: none;
     float: left;
-    margin: 0 5px; }
-    .share li:before {
+    margin: 0 5px; }	
+	 .share li:before {
       content: "";
       display: none; }
     .share li:last-child {
@@ -282,6 +282,14 @@ cite {
       position: relative;
       height: 22px;
       top: 1px; }
+    .share li.sharetext {
+      font-weight: 800;
+      font-size: 11px;
+      color: #888888;
+      line-height: 22px;
+      letter-spacing: 0.5px;
+	  margin-top: 3px;
+      text-transform: uppercase;}
     .share li a {
       font-weight: 800;
       font-size: 11px;
@@ -292,14 +300,14 @@ cite {
       text-decoration: none !important; }
       .share li a.st_facebook_custom {
         background: url('../imgs/share_facebook.png') left center no-repeat;
-        padding-left: 15px; }
+        padding-left: 10px; }
       .share li a.st_linkedin_custom {
         background: url('../imgs/share_linkedin.png') left center no-repeat;
-        padding-left: 23px; 
-		    color: #0085AF; }
+        padding-left: 14px; 
+	    color: #0085AF; }
 	    .share li a.st_twitter_custom {
         background: url('../imgs/share_twitter.png') left center no-repeat;
-        padding-left: 23px;
+        padding-left: 15px;
         color: #00AAED; }
       .share li a.print {
         background: url('../imgs/share_print.png') left center no-repeat;
