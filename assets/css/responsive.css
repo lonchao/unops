@@ -1500,10 +1500,13 @@
         width: 1px !important; }
       .share li:first-child {
         margin-left: 0; }
-	  .share li:nth-child(8), .share li:nth-child(10) {
-	    padding-top: 14px;
-		width: 40px;
-	  }
+      .share li:nth-child(8) {
+	padding-top: 14px;
+	width: 40px;
+	}
+      .share li:nth-child(9), .share li:nth-child(10){
+  	display:none;
+	}	  
       .share li a {
         font-size: 9px;
         font-weight: 600;
