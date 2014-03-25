@@ -139,14 +139,28 @@ $('.responsive_menu .levels').find('.back').click(function(e){
   //END Menu REsponsive
 
   //language_links_mobile
-  var $ul = $("#header").find(".language_links");
-  $("#header").find(".wrapper:eq(0)").prepend($ul.clone().removeClass('language_links').addClass('language_links_mobile').remove('.separator'));
+  var $ul = $("#header").find(".language_links");  
+  var language  
+  switch (_spPageContextInfo.currentCultureName) {
+    case 'fr-FR':
+        language = 'Français';
+        break;
+    case 'es-ES':		
+        language = 'Español';
+        break;	
+	default:
+		language = 'English';
+		break;	
+  }
+  
+  $("#header").find(".wrapper:eq(0)").prepend($ul.clone().removeClass('language_links').addClass('language_links_mobile').remove('.separator').prepend('<li class="current"><a href="#">' + language + '</a></li>'));
   if ($('.language_links_mobile').length>0) {
     $('.language_links_mobile .current').click(function (){
       $(this).parent().toggleClass('opened');
     });
   }
   //END language_links_mobile
+
 
 
   resize();
