@@ -87,33 +87,6 @@ $(function() {
   if ($('#project').length >0) {
     $( ".four_columns .column:nth-child(3)" ).addClass('last');
   }
-  if ($('.cases').length >0) {
-    $( ".cases .item:nth-child(3n)" ).addClass('last');
-
-
-    $('.loadmore').click(function(e){
-      e.preventDefault();
-      var $this = $(this);
-
-      $this.hide();
-      $('#dvLoad').show();
-
-      var divisor = $('.cases');
-      // carrega o conteudo
-      var content = $('<div class="new_content"></div>');
-      var newContent = $('.new_content').html();
-      content.load('procurament_more.html', {}, function()
-      {
-        // oculta o loader e slideDown as noticias carregadas
-        $('#dvLoad').hide();
-        $('.new_content').slideDown();
-      });
-      // coloca o conteudo no DOM
-      divisor.append(content);
-
-      $this.show();
-    });
-  }
 
   var andandomenu=false;
 
@@ -166,14 +139,28 @@ $('.responsive_menu .levels').find('.back').click(function(e){
   //END Menu REsponsive
 
   //language_links_mobile
-  var $ul = $("#header").find(".language_links");
-  $("#header").find(".wrapper:eq(0)").prepend($ul.clone().removeClass('language_links').addClass('language_links_mobile').remove('.separator'));
+  var $ul = $("#header").find(".language_links");  
+  var language  
+  switch (_spPageContextInfo.currentCultureName) {
+    case 'fr-FR':
+        language = 'Français';
+        break;
+    case 'es-ES':		
+        language = 'Español';
+        break;	
+	default:
+		language = 'English';
+		break;	
+  }
+  
+  $("#header").find(".wrapper:eq(0)").prepend($ul.clone().removeClass('language_links').addClass('language_links_mobile').remove('.separator').prepend('<li class="current"><a href="#">' + language + '</a></li>'));
   if ($('.language_links_mobile').length>0) {
     $('.language_links_mobile .current').click(function (){
       $(this).parent().toggleClass('opened');
     });
   }
   //END language_links_mobile
+
 
 
   resize();

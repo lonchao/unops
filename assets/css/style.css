@@ -258,9 +258,6 @@ cite {
   position: relative;
   display: block;
   margin-bottom: 13px; }
-  .share.simple {
-    top: 18px;
-    margin-bottom: 0; }
   .share li {
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -270,8 +267,8 @@ cite {
     opacity: .8;
     list-style: none;
     float: left;
-    margin: 0 5px; }
-    .share li:before {
+    margin: 0 5px; }	
+	 .share li:before {
       content: "";
       display: none; }
     .share li:last-child {
@@ -285,6 +282,14 @@ cite {
       position: relative;
       height: 22px;
       top: 1px; }
+    .share li.sharetext {
+      font-weight: 800;
+      font-size: 11px;
+      color: #888888;
+      line-height: 22px;
+      letter-spacing: 0.5px;
+	  margin-top: 3px;
+      text-transform: uppercase;}
     .share li a {
       font-weight: 800;
       font-size: 11px;
@@ -293,19 +298,23 @@ cite {
       letter-spacing: 0.5px;
       text-transform: uppercase;
       text-decoration: none !important; }
-      .share li a.facebook {
-        background: url(../imgs/share_facebook.png) left center no-repeat;
-        padding-left: 15px; }
-      .share li a.twitter {
-        background: url(../imgs/share_twitter.png) left center no-repeat;
-        padding-left: 23px;
+      .share li a.st_facebook_custom {
+        background: url('../imgs/share_facebook.png') left center no-repeat;
+        padding-left: 10px; }
+      .share li a.st_linkedin_custom {
+        background: url('../imgs/share_linkedin.png') left center no-repeat;
+        padding-left: 14px; 
+	    color: #0085AF; }
+	    .share li a.st_twitter_custom {
+        background: url('../imgs/share_twitter.png') left center no-repeat;
+        padding-left: 15px;
         color: #00AAED; }
       .share li a.print {
-        background: url(../imgs/share_print.png) left center no-repeat;
+        background: url('../imgs/share_print.png') left center no-repeat;
         padding-left: 20px;
         color: #888888; }
-      .share li a.more {
-        background: url(../imgs/share_more.png) left center no-repeat;
+      .share li a.st_sharethis_custom {
+        background: url('../imgs/share_more.png') left center no-repeat;
         padding-left: 19px;
         color: #5AA624; }
 
@@ -843,20 +852,20 @@ cite {
         color: #666666;
         line-height: 24px;
         letter-spacing: 0.5px; }
-      .services_columns .column.partners .phrase {
+      .phrase {
         border-radius: 3px;
         background: #FAFBFC;
         border: 1px solid #CED4D9;
         padding: 21px; }
-        .services_columns .column.partners .phrase .left {
+        .phrase .left {
           width: 128px;
           float: left;
           position: relative;
           display: block; }
-          .services_columns .column.partners .phrase .left img {
+          .phrase .left img {
             margin-bottom: 10px;
             width: 128px; }
-          .services_columns .column.partners .phrase .left label {
+          .phrase .left label {
             font-weight: 400;
             font-size: 16px;
             color: #666666;
@@ -864,19 +873,18 @@ cite {
             margin: 10px 0;
             display: block;
             position: relative; }
-          .services_columns .column.partners .phrase .left .btn {
+          .phrase .left .btn {
             display: block; }
-        .services_columns .column.partners .phrase .right {
+        .phrase .right {
           float: none;
           position: relative;
           display: block;
-          margin-left: 158px; }
-          .services_columns .column.partners .phrase .right p {
-            font-style: italic;
-            font-size: 14px;
-            color: #666666;
-            line-height: 26px;
-            letter-spacing: 0.5px;
+          margin-left: 158px;
+          font-size: 14px;
+          color: #666666;
+          line-height: 26px;
+          letter-spacing: 0.5px; }
+          .phrase .right p {
             margin: 0; }
     .services_columns .column.become {
       margin-left: 2.5%;
