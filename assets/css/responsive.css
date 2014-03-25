@@ -1504,6 +1504,9 @@
 	padding-top: 14px;
 	width: 40px;
 	}
+      .share li:nth-child(1) {
+	width: auto;
+	}
       .share li:nth-child(9), .share li:nth-child(10){
   	display:none;
 	}	  
